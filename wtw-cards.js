@@ -105,7 +105,7 @@ class WTWCard extends LitElement {
       padding: 10px;
     }
     .bg {
-      background-image: url(/local/wtw_heat.png);
+      background-image: url(/local/lovelace-wtw/wtw_heat.png);
       height: 200px;
       background-size: contain;
       background-repeat: no-repeat;
