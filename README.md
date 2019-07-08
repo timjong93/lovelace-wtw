@@ -1,6 +1,8 @@
 # Homeassistant Lovelace WTW card
 
-Use https://github.com/LukasdeBoer/esp8266-whr930-mqtt to connect to your WHR930 and then use this lovelace card to visualize your data!
+Use https://github.com/LukasdeBoer/esp8266-whr930-mqtt to connect your WHR930 to Homeassistant and then use this lovelace card to visualize your data!
+
+![Image](https://raw.githubusercontent.com/timjong93/lovelace-wtw/master/result.png)
 
 # Installation
 
@@ -15,3 +17,4 @@ resources:
 * Restart home assistant
 * ???
 * Profit!
+
