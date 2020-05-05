@@ -66,7 +66,7 @@ class WTWCard extends LitElement {
   }
 
   getBypassTmpl(){
-    if(Number(this.hass.states['sensor.wtw_bypass_valve'].state) > 0){
+    if(Number(this.hass.states['sensor.wtw_bypass_step'].state) > 0){
       return html`<ha-icon icon="mdi:electric-switch"></ha-icon>`;
     }else{
       return html`<ha-icon icon="mdi:electric-switch-closed"></ha-icon>`;
