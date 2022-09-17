@@ -50,7 +50,7 @@ class WTWCard extends LitElement {
   }
 
   getFanTmpl(){
-    if(this.hass.states['sensor.wtw_intake_fan_active'].state == 'Yes'){
+    if(this.hass.states['sensor.wtw_intake_fan_active'].state == 'Yes'  ||  this.hass.states['sensor.wtw_intake_fan_active'].state == 'True'){
       return html`<ha-icon icon="mdi:fan"></ha-icon>`;
     }else{
       return html`<ha-icon class="inactive" icon="mdi:fan"></ha-icon>`;
@@ -58,7 +58,7 @@ class WTWCard extends LitElement {
   }
 
   getAirFilterTmpl(){
-    if(this.hass.states['sensor.wtw_filter_status'].state == 'OK'){
+    if(this.hass.states['sensor.wtw_filter_status'].state == 'OK' || this.hass.states['sensor.wtw_filter_status'].state == 'Ok'){
       return html`<ha-icon icon="mdi:air-filter"></ha-icon>`;
     }else{
       return html`<ha-icon class="warning" icon="mdi:air-filter"></ha-icon>`;
@@ -66,15 +66,15 @@ class WTWCard extends LitElement {
   }
 
   getBypassTmpl(){
-    if(Number(this.hass.states['sensor.wtw_bypass_factor'].state) > 0){
+    if(Number(this.hass.states['sensor.wtw_bypass_step'].state) > 0){
       return html`<ha-icon icon="mdi:electric-switch"></ha-icon>`;
     }else{
-      return html`<ha-icon class="inactive" icon="mdi:electric-switch"></ha-icon>`;
+      return html`<ha-icon icon="mdi:electric-switch-closed"></ha-icon>`;
     }
   }
 
   getPreHeatTmpl(){
-    if(Number(this.hass.states['sensor.wtw_valve_preheating'].state) > 0){
+    if(Number(this.hass.states['sensor.wtw_preheating_valve'].state) > 0){
       return html`<ha-icon icon="mdi:radiator"></ha-icon>`;
     }else{
       return html`<ha-icon class="inactive" icon="mdi:radiator"></ha-icon>`;
@@ -82,7 +82,7 @@ class WTWCard extends LitElement {
   }
 
   getSummerModeTmpl(){
-    if(this.hass.states['sensor.wtw_summer_mode'].state == 'No'){
+    if(this.hass.states['sensor.wtw_summer_mode'].state == 'No'  ||  this.hass.states['sensor.wtw_summer_mode'].state == 'False'){
       return html`<ha-icon icon="mdi:snowflake"></ha-icon>`;
     }else{
       return html`<ha-icon class="inactive" icon="mdi:weather-sunny"></ha-icon>`;
