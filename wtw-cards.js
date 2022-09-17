@@ -74,7 +74,7 @@ class WTWCard extends LitElement {
   }
 
   getPreHeatTmpl(){
-    if(Number(this.hass.states['sensor.wtw_valve_preheating'].state) > 0){
+    if(Number(this.hass.states['sensor.wtw_preheating_valve'].state) > 0){
       return html`<ha-icon icon="mdi:radiator"></ha-icon>`;
     }else{
       return html`<ha-icon class="inactive" icon="mdi:radiator"></ha-icon>`;
